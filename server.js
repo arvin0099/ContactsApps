@@ -13,7 +13,14 @@ app.get('/', (req, res) => {
     res.send('TEST')
 })
 
+app.get('/contacts', (req, res) => {
+    res.render('index.ejs, {contacts}')
+})
 
+app.get ('/show/:index', (req, res)=> {
+    const index = req.params.id; // id is the array number in Contacts
+    res.render('show.ejs', {contact: contacts[index]}) // displays ‘show.ejs’
+})
 
 
 
