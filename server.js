@@ -19,11 +19,27 @@ app.get('/contacts', (req, res) => {
     })
 })
 
-app.get('/new-contacts', (req, res) => {
+app.get('/contacts/new', (req, res) => {
     res.render('new.ejs')
 })
 
 app.post('/contacts', (req, res) => {
+    contact.push(req.body)
+    res.redirect('/contacts')
+})
+
+app.get('contacts/:id/edit', (req, res)=> {
+	res.render('edit.ejs', {
+		contact: contacts[req.params.id],
+		index: req.params.id
+	})
+	
+})
+
+app.delete ('/:id/edit', (req, res)=> {
+	contacts.splice(req.params.id, 1);
+	
+	res.redirect('/contacts');
 
 })
 
