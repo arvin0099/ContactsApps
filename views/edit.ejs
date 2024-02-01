@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Contacts</title>
+</head>
+<body>
+    <form action="" method="POST">
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" id="firstName" value="<%=contact.firstName%>">
+
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" id="lastName" value="<%=contact.lastName%>">
+
+        <label for="cellPhone">cell phone</label>
+        <input type="text" name="cellPhone" id="cellPhone" value="<%=contact.cellPhone%>">
+
+        <label for="email">email</label>
+        <input type="text" name="email" id="email" value="<%=contact.cellPhone%>">
+
+    </form>
+    <form action="/contacts/<%= index %>?_method=DELETE" method="POST">
+        <input type="submit" value="DELETE" />
+    </form>
+    
+</body>
+</html>

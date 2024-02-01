@@ -25,6 +25,7 @@ app.get('/contacts/new', (req, res) => {
 
 app.post('/contacts', (req, res) => {
     contact.push(req.body)
+    console.log(contact)
     res.redirect('/contacts')
 })
 
