@@ -14,7 +14,17 @@ app.get('/', (req, res) => {
 })
 
 app.get('/contacts', (req, res) => {
-    res.render('index.ejs, {contacts}')
+    res.render('index.ejs', {
+        contact: contact
+    })
+})
+
+app.get('/new-contacts', (req, res) => {
+    res.render('new.ejs')
+})
+
+app.post('/contacts', (req, res) => {
+
 })
 
 app.get ('/show/:index', (req, res)=> {
