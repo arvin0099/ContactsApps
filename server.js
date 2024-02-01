@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const contact = require('./models/contacts.js')
 const port = 3000
 const methodOverride = require('method-override')
 
